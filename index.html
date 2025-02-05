@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Webpage Tab Header -->
+    <title>B2S 🎓</title>
+    <!--Link to Skeleton Style Sheet which makes it look nicer-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY="
+      crossorigin="anonymous"
+    />
+    <!-- This is a comment -->
+  </head>
+  <script
+    type="module"
+    src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+  ></script>
+  <script src=".\script.js" defer></script>
+  <body>
+    <!-- Page Header -->
+    <h1>Back to School Embedding Website 💻📊</h1>
+    <!-- First Filter Container -->
+    <fieldset id="first-set-of-buttons">
+      <legend>Filter Buttons</legend>
+      <input
+        type="button"
+        value="Oregon and Washington only"
+        id="oregon_Washington"
+      />
+      <input type="button" value="Clear Filter" id="clear_filter" />
+      <input type="button" value="Undo" id="undo_filter" />
+    </fieldset>
+    <!-- Second Filter Container -->
+    <fieldset id="second-set-of-filters">
+      <legend>Sales Filter</legend>
+      <input type="number" placeholder="Min Value" , id="min_value" />
+      <input type="number" placeholder="Max Value" , id="max_value" />
+      <input type="button" value="Apply" , id="apply_button" />
+    </fieldset>
+    <!-- Viz -->
+    <div class="content">
+      <tableau-viz
+        id="tableauViz"
+        src="https://public.tableau.com/views/Superstore_embedded_800x800/Overview"
+        toolbar="top"
+        height="100vh"
+        width="100vw"
+      ></tableau-viz>
+    </div>
+  </body>
+</html>
